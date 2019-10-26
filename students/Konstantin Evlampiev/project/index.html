@@ -28,9 +28,9 @@
                     <li><a class="userMenu__item" href="#">shopping card </a></li>
                     <li><a class="userMenu__item" href="#">checkout</a></li>
                     <li><a class="userMenu__item" href="#">shopping card</a></li>
-                    <li> <a class="userMenu__item" href="#">
+                    <li> <a class="userMenu__item" href="#" @click="isVisibleCart=!isVisibleCart">
                             <i class="fas fa-shopping-basket"></i>
-                            <span class="basket_indicator">(empty)</span>
+                            <!-- <span class="basket_indicator">{{cartAmount}}</span> -->
                         </a> </li>
                 </ul>
             </div>
@@ -90,9 +90,13 @@
         </div>
         <div class="main">
             <h2 class="grayTitle"> featured </h2>
-            <div class="goods-list">
 
-            </div>
+            <search></search>
+
+            <goods-list ref="catalog" :isVisibleCart="isVisibleCart">
+
+            </goods-list>
+
             <div class="main__nav">
 
             </div>
@@ -166,21 +170,22 @@
             </div>
         </div>
 
-        <div class="basketWindow hidden-form">
-            <div class="basketWindow__refSquare">
+        <cart :isVisibleCart="isVisibleCart" ref="cart"> </cart>
 
-            </div>
-            <h2 class="basketWindow__header"> shopping list </h2>
-            <div class="basketWindow__itemContainer">
-            </div>
-            <div class="basketWindow__footer">
-                basket is empty
-            </div>
-        </div>
+
+        <notification :display="displayNotification" :message="notificationMessage" />
+
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/main.js"></script>
+
     <script src='packages/handMadeSlider/scripts/slider.js'> </script>
-    <script src="js/script.js"></script>
+
 
 </body>
 

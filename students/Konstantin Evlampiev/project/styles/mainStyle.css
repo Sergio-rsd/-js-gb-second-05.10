@@ -221,7 +221,7 @@ h2 {
   background-color: #fff;
   position: absolute;
   top: -8px;
-  right: 4px;
+  right: 12px;
   width: 18px;
   height: 20px;
   transform: rotate(45deg);
@@ -236,8 +236,9 @@ h2 {
   width: 100%;
   text-align: right;
   font-size: 16px;
-  border-top: 1px solid grey;
+  border-top: 1px solid #ccc;
   font-weight: 800;
+  padding-top: 10px;
 }
 .hidden-form {
   visibility: hidden;
@@ -260,13 +261,12 @@ h2 {
   padding: 10px;
   width: 50px;
 }
-.cartItem__plusBtn {
-  text-align: center;
-  background-color: inherit;
-}
+.cartItem__plusBtn,
 .cartItem__minusBtn {
   text-align: center;
   background-color: inherit;
+  border: none;
+  color: #777;
 }
 .cartItem__quantity {
   text-align: center;
@@ -276,4 +276,59 @@ h2 {
   width: 50px;
   padding: 10px;
   font-weight: 800;
+}
+.cartItem:nth-child(2n) {
+  background-color: #eee;
+}
+.cartButton {
+  float: right;
+  margin: 15px;
+  width: 150px;
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+}
+.emptyBasket {
+  text-align: center;
+  font-style: italic;
+  font-weight: 800;
+  color: #777;
+  font-size: 30px;
+}
+.error-notification {
+  position: absolute;
+  min-width: 500px;
+  top: 250px;
+  left: 0px;
+  width: 980px;
+  padding: 10px;
+  background-color: #fdafaf;
+  color: maroon;
+  box-shadow: 8px 8px 19px 5px rgba(0, 0, 0, 0.43);
+  opacity: 0.9;
+  z-index: 17;
+  font-size: 18px;
+}
+.error-notification div {
+  margin: 2px;
+  border: 1px solid #ec5f5f;
+  padding: 10px;
+}
+.error-notification p {
+  width: 100%;
+  text-align: center;
+}
+.error-notification button {
+  background-color: red;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin-left: 200px;
+  border: none;
+  border-radius: 20px;
+}
+.error-notification button:hover {
+  background-color: maroon;
+  color: white;
+  font-size: 18px;
 }
