@@ -1,14 +1,13 @@
 {
-  "name": "project",
+  "name": "7_project_vue_js",
   "version": "1.0.0",
-  "description": "Server part for eShop (training app on js level2)",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon src/server/server.js"
   },
   "keywords": [],
-  "author": "Konstantin Evlampiev",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "express": "^4.17.1",
